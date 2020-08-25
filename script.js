@@ -5,7 +5,7 @@ window.onload = () => {
 	timeCodes.forEach(elem => {
 		let nodeTimes = elem.textContent.split(':');
 		let timeFormat = nodeTimes.reduceRight((res, curr, i) => {
-			return res + parseInt(curr) * (3 - i);
+			return res + parseInt(curr) * (nodeTimes.length - i);
 		}, 0);
 		elem.href = 'potplayer://https://youtu.be/' +
 			window.location.search.split('=')[1] +
