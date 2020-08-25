@@ -10,7 +10,7 @@ window.onload = () => {
 		}, '');
 		elem.href = 'potplayer://https://youtu.be/' +
 			window.location.search.split('=')[1] +
-			'?/t=' +
+			'?t=' +
 			timeFormat;
 	});
 };
