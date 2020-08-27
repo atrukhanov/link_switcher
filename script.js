@@ -10,7 +10,7 @@ window.onload = () => {
 		const id = window.location.search.split('=')[1];
 		let nodeTimes = elem.textContent.split(':');
 		let timeSec = nodeTimes.reduceRight((res, curr, i) => {
-			return res + parseInt(curr) * Math.pow(60, nodeTimes.length - i - 1);
+			return res + parseInt(curr) * Math.pow(60, --nodeTimes.length - i);
 		}, 0);		
 		elem.href = `potplayer://https://youtu.be/${id}?t=${timeSec}`;
 	});
